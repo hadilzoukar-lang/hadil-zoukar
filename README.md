@@ -27,3 +27,13 @@ https://portfoliohadilzoukar-psi.vercel.app
 .MATLAB / LabVIEW - Simulation et acquisition de données
 
 .Python - Scripts, traitement de données, prototypage
+
+
+📧 Contact
+
+Hadil zoukar
+
+📧 Email : hadilzoukar@gmail.com
+
+💼 LinkedIn : www.linkedin.com/in/hadil-zoukar-007bb53b9
+
