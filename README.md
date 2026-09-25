@@ -6,11 +6,11 @@ Portfolio professionnel présentant mon parcours en systèmes embarqués, mes co
 
 Étudiante en 3e année de licence en Systèmes Embarqués | Faculté des Sciences de Monastir
 
-🌐 Voir le portfolio
+🌐 Voir le portfolio:
 
 https://portfoliohadilzoukar-psi.vercel.app
 
-🛠️ Technologies utilisées
+🛠️ Technologies utilisées:
 
 .C/C++ / VHDL - Programmation bas niveau et description matérielle
 
@@ -29,7 +29,7 @@ https://portfoliohadilzoukar-psi.vercel.app
 .Python - Scripts, traitement de données, prototypage
 
 
-📧 Contact
+📧 Contact:
 
 Hadil zoukar
 
