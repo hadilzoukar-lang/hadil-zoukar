@@ -4,7 +4,9 @@ Portfolio Professionnel - Hadil ZOUKAR
 Portfolio professionnel présentant mon parcours en systèmes embarqués, mes compétences techniques et mes projets académiques.
 
 Étudiante en 3e année de licence en Systèmes Embarqués | Faculté des Sciences de Monastir
+
 🌐 Voir le portfolio
+https://portfoliohadilzoukar-psi.vercel.app
 
 🛠️ Technologies utilisées
 
