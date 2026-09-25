@@ -7,6 +7,7 @@ Portfolio professionnel présentant mon parcours en systèmes embarqués, mes co
 🌐 Voir le portfolio
 
 🛠️ Technologies utilisées
+
 .C / VHDL - Programmation bas niveau et description matérielle
 .STM32 / Arduino - Développement sur microcontrôleurs
 .Raspberry Pi - Systèmes embarqués sous Linux
