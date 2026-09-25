@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+
+    <title>Mini Domotique</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            margin: 0;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #ccc;
+        }
+
+        .value {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            background: white;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🏠 Mini Domotique</h1>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h2>🌡️ Température</h2>
+
+            <p class="value">
+                {% if temperature is not none %}
+                    {{ temperature }} °C
+                {% else %}
+                    -- °C
+                {% endif %}
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>💧 Humidité</h2>
+
+            <p class="value">
+
+                {% if humidity is not none %}
+                    {{ humidity }} %
+                {% else %}
+                    -- %
+                {% endif %}
+
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>💡 Lumière</h2>
+
+            <p class="value">
+
+                {% if light %}
+                    ON
+                {% else %}
+                    OFF
+                {% endif %}
+
+            </p>
+
+            <a href="/light/on">
+                <button>Allumer</button>
+            </a>
+
+            <a href="/light/off">
+                <button>Éteindre</button>
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>🚶 Présence</h2>
+
+            <p class="value">
+
+                {% if motion %}
+                    Détectée
+                {% else %}
+                    Aucune
+                {% endif %}
+
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>⚙️ Automatique</h2>
+
+            <p class="value">
+
+                {% if automatic %}
+                    ON
+                {% else %}
+                    OFF
+                {% endif %}
+
+            </p>
+
+            <a href="/automatic/on">
+                <button>Activer</button>
+            </a>
+
+            <a href="/automatic/off">
+                <button>Désactiver</button>
+            </a>
+
+        </div>
+
+
+        <div class="card">
+
+            <h2>🔔 Alarme</h2>
+
+            <p class="value">
+
+                {% if alarm %}
+                    ARMÉE
+                {% else %}
+                    DÉSACTIVÉE
+                {% endif %}
+
+            </p>
+
+            <a href="/alarm/on">
+                <button>Armer</button>
+            </a>
+
+            <a href="/alarm/off">
+                <button>Désarmer</button>
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <h2>📊 Mesures</h2>
+
+    <table>
+
+        <tr>
+            <th>Date</th>
+            <th>Température</th>
+            <th>Humidité</th>
+        </tr>
+
+        {% for measurement in measurements %}
+
+        <tr>
+
+            <td>{{ measurement[0] }}</td>
+
+            <td>{{ measurement[1] }} °C</td>
+
+            <td>{{ measurement[2] }} %</td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+
+    <h2>📋 Événements</h2>
+
+    <table>
+
+        <tr>
+            <th>Date</th>
+            <th>Événement</th>
+        </tr>
+
+        {% for event in events %}
+
+        <tr>
+
+            <td>{{ event[0] }}</td>
+
+            <td>{{ event[1] }}</td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+</div>
+
+</body>
+
+</html>
