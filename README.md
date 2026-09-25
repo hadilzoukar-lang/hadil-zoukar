@@ -11,7 +11,7 @@ https://portfoliohadilzoukar-psi.vercel.app
 
 🛠️ Technologies utilisées
 
-.C / VHDL - Programmation bas niveau et description matérielle
+.C/C++ / VHDL - Programmation bas niveau et description matérielle
 
 .STM32 / Arduino - Développement sur microcontrôleurs
 
